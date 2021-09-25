@@ -32,6 +32,7 @@ header a {
 header nav{
     float: right;
     margin: 7px 0;
+    /* border: 1px solid red; */
 }
 
 header nav ul li{
@@ -39,9 +40,14 @@ header nav ul li{
 }
 
 header nav ul li a{
+    display: inline-block;
     margin: 0 30px;
     font-weight: lighter;
     font-size: 22px;
+}
+
+header nav ul li a:first-child {
+    margin-left: 0;
 }
 
 footer {
@@ -266,6 +272,85 @@ intro p {
     color: #fce138;
 }
 
+@media (max-width: 970px) { 
+    header {
+        padding-bottom: 40px;
+    }
 
+    header h1 {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    header nav {
+       float: left; 
+       width: 100%;
+       /* border: 1px solid red; */
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header nav ul li a{
+        /* border-right: 1px solid black; */
+        margin-right: 0;
+        padding: 0 10px;
+    }
+
+    header nav ul li:first-child a {
+        padding-left: 0;
+    }
+
+    header nav ul li:last-child a {
+        border-right: none;
+    }
+
+    .hero-form {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 710px) {
+    header {
+        padding: 20px 0 170px 20px;
+    }
+
+    header h1 {
+        margin-bottom: 25px;
+    }
+
+    header nav {
+        margin: 0 auto;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        text-align: center; 
+        border-bottom: 1px dashed white;
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    header nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    header nav ul li a {
+        border: none;
+        /* margin-bottom: 10px; */
+        margin: 7px 0;
+        width: 100%;
+        padding: 0;
+        padding-left: 0;
+    }
+}
 
 
